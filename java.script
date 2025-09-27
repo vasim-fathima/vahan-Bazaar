@@ -1,0 +1,32 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("sellForm");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    // Loop through all inputs for validation
+    form.querySelectorAll("input, select").forEach((input) => {
+      const errorEl = input.nextElementSibling;
+      errorEl.style.display = "none";
+
+      if (!input.checkValidity()) {
+        isValid = false;
+        errorEl.textContent = input.validationMessage;
+        errorEl.style.display = "block";
+      }
+
+      // Custom validation for City (must be letters only)
+      if (input.id === "city" && !/^[a-zA-Z\s]+$/.test(input.value)) {
+        isValid = false;
+        errorEl.textContent = "Enter a valid Indian city name";
+        errorEl.style.display = "block";
+      }
+    });
+
+    if (isValid) {
+      alert("✅ Your bike details have been submitted successfully!");
+      form.reset();
+    }
+  });
+});

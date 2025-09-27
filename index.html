@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vahan Bazaar — Sell Used Bike</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="https://img.icons8.com/color/96/motorcycle.png" alt="Vahan Bazaar Logo" />
+        <span>Vahan Bazaar</span>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Sell Bike</a>
+        <a href="#">Used Bikes</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Sell Your Bike Easily in India</h1>
+    <p>Get the best price in ₹ with Vahan Bazaar — Fast, Reliable, Trusted.</p>
+    <img src="https://www.bajajauto.com/-/media/Images/BajajAuto/Home/Bike-and-Scooter.jpg" alt="Bike Image" />
+  </section>
+
+  <!-- Sell Form -->
+  <main>
+    <section class="sell-section">
+      <h2>Sell Your Bike</h2>
+      <form id="sellForm" novalidate>
+        <div class="form-row">
+          <label for="bikeModel">Bike Model *</label>
+          <input type="text" id="bikeModel" name="bikeModel" placeholder="e.g. Honda CB Shine" required />
+          <small class="error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="kmDriven">Kilometres Driven *</label>
+          <input type="number" id="kmDriven" name="kmDriven" placeholder="e.g. 15000" min="100" max="200000" required />
+          <small class="error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="ownership">Ownership *</label>
+          <select id="ownership" name="ownership" required>
+            <option value="">Select</option>
+            <option value="1">1st Owner</option>
+            <option value="2">2nd Owner</option>
+            <option value="3">3rd Owner</option>
+            <option value="4">4+ Owner</option>
+          </select>
+          <small class="error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" placeholder="Enter City in India" required />
+          <small class="error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="expectedPrice">Expected Price (₹) *</label>
+          <input type="number" id="expectedPrice" name="expectedPrice" placeholder="e.g. 50000" min="1000" required />
+          <small class="error"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="photos">Upload Photos *</label>
+          <input type="url" id="photos" name="photos" placeholder="Paste online image URL" required />
+          <small class="error"></small>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Info -->
+    <section class="info-section">
+      <h2>Important Information</h2>
+      <ol>
+        <li>Provide accurate bike details.</li>
+        <li>Ensure you are the legal owner of the vehicle.</li>
+        <li>Details must match your registration certificate.</li>
+        <li>False details may lead to rejection or action.</li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Vahan Bazaar | Designed for India 🇮🇳</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
